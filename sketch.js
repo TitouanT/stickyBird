@@ -45,7 +45,7 @@ function draw() {
 		}
 		else {
 			draw.i = -1;
-			draw.gameOver = false;
+			for (let i = 0; i < COLS; i++) mat[0][i] = EMPTY;
 		}
 		draw.i++;
 	}
@@ -139,7 +139,7 @@ function display (mat, bird) {
 				fill(0,0,255);
 			}
 			else {
-				fill(draw.gameOver ? 0 : 255);
+				fill(255);
 			}
 			rect(j * c_width, i * c_height, c_width, c_height);
 		}
