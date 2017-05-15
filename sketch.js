@@ -10,6 +10,7 @@ let bird;
 function setup() {
 	// createCanvas(200, 200);
 	createCanvas(windowWidth, windowHeight);
+	// createCanvas(displayWidth, displayHeight);
 	mat = [];
 	bird = new Bird();
 	for (let i = 0; i < LINES; i++) {
@@ -60,6 +61,7 @@ function windowResized() {
 }
 
 function touchStarted () {
+	fullscreen(true);
 	if (!draw.gameOver && mouseX >= 0 && mouseX < width && mouseY >= 0 && mouseY < height) {
 		if (windowHeight < 500 && windowWidth < 500 && !fullscreen()) {
 			fullscreen(true);
