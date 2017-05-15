@@ -59,7 +59,7 @@ function windowResized() {
 	resizeCanvas(windowWidth, windowHeight);
 }
 
-function mouseClicked () {
+function touchStarted () {
 	if (!draw.gameOver && mouseX >= 0 && mouseX < width && mouseY >= 0 && mouseY < height) {
 		if (windowHeight < 500 && windowWidth < 500 && !fullscreen()) {
 			fullscreen(true);
